@@ -42,10 +42,8 @@ model = dict(
         drop_path_rate=0.2,
         patch_norm=True,
         out_indices=(1, 2, 3),
-        #out_channels = [192, 384, 768],
         with_cp=False,
         convert_weights=False,
-       # frozen_stages = 4
         ),
     neck=dict(
         type='ChannelMapper',
@@ -188,8 +186,6 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         metainfo=metainfo,
-        #ann_file='annotation_val.json',
-        #ann_file='day_val.json',
         ann_file='annotation_val_scene.json',
         data_prefix=dict(img='val/'),
         test_mode=True,

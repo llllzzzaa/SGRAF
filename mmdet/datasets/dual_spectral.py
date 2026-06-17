@@ -107,8 +107,6 @@ class DualSpectralDatasetScene(BaseDetDataset):
             else:
                 suffix = " at day"
             text = " . ".join([f"{c}{suffix}" for c in self.metainfo['classes']])
-            # scene_token = "night scene" if scene == 1 else "day scene"
-            # text = " . ".join([f"{scene_token} with a {c}" for c in self.metainfo['classes']])
             data_info['text'] = text
             data_info['custom_entities'] = True
 
